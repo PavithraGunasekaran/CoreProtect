@@ -69,6 +69,10 @@
   </build>
   <repositories>
     <repository>
+      <id>playpro-repo</id>
+      <url>https://maven.playpro.com</url>
+    </repository>
+    <repository>
       <id>spigot-repo</id>
       <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
     </repository>
@@ -86,6 +90,12 @@
     </repository>
   </repositories>
   <dependencies>
+    <dependency>
+      <groupId>net.coreprotect</groupId>
+      <artifactId>coreprotect</artifactId>
+      <version>21.0</version>
+      <scope>provided</scope>
+    </dependency>
     <!--
     paper-api (<= 1.16): com.destroystokyo.paper
     spigot-api: org.spigotmc

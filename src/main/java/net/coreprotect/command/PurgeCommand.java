@@ -25,7 +25,7 @@ import net.coreprotect.utility.ChatMessage;
 import net.coreprotect.utility.Color;
 import net.coreprotect.utility.Util;
 
-public class PurgeCommand extends Consumer {
+public class PurgeCommand extends Consumer implements Command {
 
     protected static void runCommand(final CommandSender player, boolean permission, String[] args) {
         int resultc = args.length;

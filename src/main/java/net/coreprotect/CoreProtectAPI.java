@@ -32,6 +32,14 @@ import net.coreprotect.utility.Chat;
 import net.coreprotect.utility.Util;
 
 public class CoreProtectAPI extends Queue {
+    private static CoreProtectAPI instance;
+    private CoreProtectAPI(){
+
+    }
+
+    public static CoreProtectAPI getInstance(){
+        return  instance;
+    }
 
     public class ParseResult {
         String[] parse;

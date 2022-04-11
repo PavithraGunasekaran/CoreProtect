@@ -9,7 +9,7 @@ import net.coreprotect.language.Selector;
 import net.coreprotect.utility.Chat;
 import net.coreprotect.utility.Color;
 
-public class HelpCommand {
+public class HelpCommand implements Command {
     protected static void runCommand(CommandSender player, boolean permission, String[] args) {
         int resultc = args.length;
         if (permission) {

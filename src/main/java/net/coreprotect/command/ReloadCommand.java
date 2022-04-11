@@ -9,7 +9,7 @@ import net.coreprotect.thread.NetworkHandler;
 import net.coreprotect.utility.Chat;
 import net.coreprotect.utility.Color;
 
-public class ReloadCommand {
+public class ReloadCommand implements Command  {
     protected static void runCommand(final CommandSender player, boolean permission, String[] args) {
         if (permission) {
             if (ConfigHandler.converterRunning) {

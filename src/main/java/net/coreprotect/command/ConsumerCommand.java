@@ -11,13 +11,13 @@ import net.coreprotect.language.Selector;
 import net.coreprotect.utility.Chat;
 import net.coreprotect.utility.Color;
 
-public class ConsumerCommand {
+public class ConsumerCommand implements Command {
 
-    private ConsumerCommand() {
+    ConsumerCommand() {
         throw new IllegalStateException("Command class");
     }
 
-    protected static void runCommand(final CommandSender player, boolean permission, String[] args) {
+    public static void runCommand(final CommandSender player, boolean permission, String[] args) {
         if (!permission) {
             Chat.sendMessage(player, Color.DARK_AQUA + "CoreProtect " + Color.WHITE + "- " + Phrase.build(Phrase.NO_PERMISSION));
             return;

@@ -39,7 +39,7 @@ public final class CoreProtect extends JavaPlugin {
         return instance;
     }
 
-    private CoreProtectAPI api = new CoreProtectAPI();
+    private CoreProtectAPI api = CoreProtectAPI.getInstance();
 
     /**
      * Get the CoreProtect API

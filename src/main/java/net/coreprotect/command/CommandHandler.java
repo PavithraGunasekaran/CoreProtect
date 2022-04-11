@@ -1211,13 +1211,19 @@ public class CommandHandler implements CommandExecutor {
                     UndoCommand.runCommand(user, command, permission, argumentArray);
                 }
                 else if (corecommand.equals("help")) {
-                    HelpCommand.runCommand(user, permission, argumentArray);
+
+                    Creator c = new ConcreteCreatorHelpCommand();
+                    c.createCommand();
                 }
                 else if (corecommand.equals("purge")) {
-                    PurgeCommand.runCommand(user, permission, argumentArray);
+
+                    Creator c = new ConcreteCreatorPurgeCommand();
+                    c.createCommand();
                 }
                 else if (corecommand.equals("inspect") || corecommand.equals("i")) {
-                    InspectCommand.runCommand(user, permission, argumentArray);
+
+                    Creator c = new ConcreteCreatorInspectCommand();
+                    c.createCommand();
                 }
                 else if (corecommand.equals("lookup") || corecommand.equals("l") || corecommand.equals("page")) {
                     LookupCommand.runCommand(user, command, permission, argumentArray);
@@ -1226,16 +1232,21 @@ public class CommandHandler implements CommandExecutor {
                     LookupCommand.runCommand(user, command, permission, new String[] { "near", "r:5x5" });
                 }
                 else if (corecommand.equals("teleport") || corecommand.equals("tp")) {
-                    TeleportCommand.runCommand(user, permission, argumentArray);
+
+                    Creator c = new ConcreteCreatorTeleportCommand();
+                    c.createCommand();
                 }
                 else if (corecommand.equals("status") || corecommand.equals("stats") || corecommand.equals("version")) {
                     StatusCommand.runCommand(user, permission, argumentArray);
                 }
                 else if (corecommand.equals("reload")) {
-                    ReloadCommand.runCommand(user, permission, argumentArray);
+
+                    Creator c = new ConcreteCreatorReloadCommand();
+                    c.createCommand();
                 }
                 else if (corecommand.equals("consumer")) {
-                    ConsumerCommand.runCommand(user, permission, argumentArray);
+                    Creator c = new ConcreteCreatorConsumerCommand();
+                    c.createCommand();
                 }
                 else {
                     Chat.sendMessage(user, Color.DARK_AQUA + "CoreProtect " + Color.WHITE + "- " + Phrase.build(Phrase.COMMAND_NOT_FOUND, Color.WHITE, "/co " + corecommand));

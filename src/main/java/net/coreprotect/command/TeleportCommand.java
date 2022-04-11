@@ -14,7 +14,7 @@ import net.coreprotect.utility.Color;
 import net.coreprotect.utility.Teleport;
 import net.coreprotect.utility.Util;
 
-public class TeleportCommand {
+public class TeleportCommand implements Command {
 
     protected static void runCommand(CommandSender player, boolean permission, String[] args) {
         int resultc = args.length;
